@@ -1,0 +1,30 @@
+==4187== Memcheck, a memory error detector
+==4187== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4187== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==4187== Command: ./bin/Mycalendar
+==4187== 
+==4187== error calling PR_SET_PTRACER, vgdb might block
+==4187== 
+==4187== Process terminating with default action of signal 2 (SIGINT)
+==4187==    at 0x4974992: read (read.c:26)
+==4187==    by 0x48ECCB5: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:516)
+==4187==    by 0x48EDE15: _IO_default_uflow (genops.c:362)
+==4187==    by 0x48C314F: __vfscanf_internal (vfscanf-internal.c:628)
+==4187==    by 0x48C21C1: __isoc99_scanf (isoc99_scanf.c:30)
+==4187==    by 0x10A038: mainMenu (common.c:38)
+==4187==    by 0x109482: main (main.c:32)
+==4187== 
+==4187== HEAP SUMMARY:
+==4187==     in use at exit: 8,192 bytes in 2 blocks
+==4187==   total heap usage: 2 allocs, 0 frees, 8,192 bytes allocated
+==4187== 
+==4187== LEAK SUMMARY:
+==4187==    definitely lost: 0 bytes in 0 blocks
+==4187==    indirectly lost: 0 bytes in 0 blocks
+==4187==      possibly lost: 0 bytes in 0 blocks
+==4187==    still reachable: 8,192 bytes in 2 blocks
+==4187==         suppressed: 0 bytes in 0 blocks
+==4187== Rerun with --leak-check=full to see details of leaked memory
+==4187== 
+==4187== For lists of detected and suppressed errors, rerun with: -s
+==4187== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
